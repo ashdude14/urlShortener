@@ -7,7 +7,7 @@ const Hero = () => {
 
   const handleShorten = async () => {
     try {
-      const response = await axios.post('https://url-shortener-wnom.vercel.app/url', { url: longUrl });
+      const response = await axios.post('https://url-shortener-wnom-git-main-ashdude14s-projects.vercel.app/url', { url: longUrl });
       setShortUrl(response.data.shortUrl);
     } catch (error) {
       console.error('Error shortening URL:', error);
@@ -27,7 +27,7 @@ const Hero = () => {
       {shortUrl && (
         <div>
           <label>Shortened URL:</label>
-          <a href={shortUrl} target='_blank' rel='noopener noreferrer'>{shortUrl}</a>
+          <a href={`https://url-shortener-wnom-git-main-ashdude14s-projects.vercel.app/${shortUrl}`} target='_blank' rel='noopener noreferrer'>{shortUrl}</a>
         </div>
       )}
     </div>

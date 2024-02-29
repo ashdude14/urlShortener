@@ -23,7 +23,7 @@ app.post('/url', (req, res) => {
 });
 
 app.get('/', (req, res) => {
-    return res.status(200).json({ "url": "hi-get" });
+    return res.status(200).json({ "message": "Hi! This is simple API to shortened the URL Created By Aashish!" });
 });
 
 app.get("/:shortUrl", async (req, res) => {

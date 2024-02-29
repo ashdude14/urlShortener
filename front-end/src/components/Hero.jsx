@@ -4,13 +4,20 @@ import axios from 'axios';
 const Hero = () => {
   const [longUrl, setLongUrl] = useState('');
   const [shortUrl, setShortUrl] = useState('');
-
+  const [res,setRes]=useState('')
   const handleShorten = async () => {
     try {
       const response = await axios.post('https://url-shortener-wnom-git-main-ashdude14s-projects.vercel.app/url', { url: longUrl });
       setShortUrl(response.data.shortUrl);
+      console.log("checking response.data",response.data)
     } catch (error) {
       console.error('Error shortening URL:', error);
+    }
+    try{
+    const getId= await axios.get(`https://url-shortener-wnom-git-main-ashdude14s-projects.vercel.app/${shortUrl}`)
+    setRes(getId);
+    }catch(err){
+        console.log(err)
     }
   };    
 
@@ -27,7 +34,8 @@ const Hero = () => {
       {shortUrl && (
         <div>
           <label>Shortened URL:</label>
-          <a href={`https://url-shortener-wnom-git-main-ashdude14s-projects.vercel.app/${shortUrl}`} target='_blank' rel='noopener noreferrer'>{shortUrl}</a>
+           {console.log(res)}
+          <a href={`https://url-shortener-wnom-git-main-ashdude14s-projects.vercel.app/${shortUrl}`} target='_blank' rel='noopener noreferrer'>{`https://url-shortener-wnom-git-main-ashdude14s-projects.vercel.app/${shortUrl}`}</a>
         </div>
       )}
     </div>

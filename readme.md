@@ -2,15 +2,20 @@
  Takes long url in input and genrates short url, there are more than one methods to encode, some of the methods are implemented in code as well. See white board diagram of [System Design](https://app.eraser.io/workspace/WT8cqvcIo0eTOKoVaQrM?origin=share)  for better understanding.
 
 ## <h2>What's this project about? </h2>
+Project has two parts -
+1. Back-end - Making API for get, post, update and delete request.
+[Backend Server](https://url-shortener-wnom.vercel.app/).
+2. Front-end - UI of project, [Client Side](https://localhost:300).
+
 <h2> Back-End Server Task </h2>
 
-1. Makes a `post` request in `localhost:8000/url` with `{"url":"<your long url link to redirect>"}`
+1. Makes a `post` request in `https://url-shortener-wnom.vercel.app//url` with `{"url":"<your long url link to redirect>"}`
 
 2. Above step will response like this `{"short-url":"ZRk9z1S"}`. note this short-url.
 
-3. Makes a get request `http://localhost:8000/<short-url>` , now this will rediect to `<your long url link to redirect>` .
+3. Makes a get request `https://url-shortener-wnom.vercel.app//<short-url>` , now this will rediect to `<your long url link to redirect>` .
 
-4. User can accesss this short url `http://localhost:8000/<short-url>` .
+4. User can accesss this short url `https://url-shortener-wnom.vercel.app/<short-url>` .
 <h2>API Endpoints-</h2>
 
  https://url-shortener-wnom.vercel.app/

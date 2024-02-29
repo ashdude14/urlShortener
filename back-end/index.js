@@ -1,6 +1,7 @@
 const express = require("express");
 const { generateId } = require('./control/generateId');
 const PORT = process.env.PORT || 8000;
+const cors = require('cors')
 require('dotenv').config();
 const mongoose = require("mongoose");
 const { longUrlToShort, tempId } = require("./control/db-insert-helper");
@@ -12,7 +13,7 @@ mongoose.connect(process.env.CREDENTIAL_MONGO)
 
 const app = express();
 app.use(express.json());
-
+app.use(cors()) 
 app.post('/url', (req, res) => {
     const requestedUrl = req.body.url;
     if (!requestedUrl) {

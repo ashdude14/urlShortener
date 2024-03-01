@@ -9,6 +9,10 @@ const Hero = () => {
   const [res, setRes] = useState('');
 
   const handleShorten = async () => {
+    if(longUrl==='') {
+      alert("🙄 Oops! enter the URL! ")
+    }
+    else{
     setLoading(true);
     setError(null); // Reset error state
     try {
@@ -27,7 +31,7 @@ const Hero = () => {
     } finally {
       setLoading(false);
     }
-  };
+  }};
 
   const copyToClipboard = () => {
     navigator.clipboard.writeText(`https://url-shortener-wnom-git-main-ashdude14s-projects.vercel.app/${shortUrl}`);
@@ -43,7 +47,8 @@ const Hero = () => {
           value={longUrl}
           placeholder='Enter long URL!'
           onChange={(e) => setLongUrl(e.target.value)}
-          className='text-xl text-black rounded-lg'
+          className='text-xl text-black rounded-lg '
+        
         />
         <button onClick={handleShorten} className='bg-red-900 rounded-xl h-[5%] w-[40%] sm:w-[15%] p-[1%] hover:bg-red-300'>Submit 🤛🏽</button>
       </div>

@@ -13,7 +13,7 @@ mongoose.connect(process.env.CREDENTIAL_MONGO)
 
 
     const corsOptions ={
-        origin:'http://localhost:3000', 
+        origin:'https://url-shortener-wwz6-git-main-ashdude14s-projects.vercel.app/', 
         credentials:true,           
         optionSuccessStatus:200,
         

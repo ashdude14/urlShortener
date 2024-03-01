@@ -36,11 +36,17 @@ Project has two parts -
 5. Any favourite IDE installed.
 
 ## <h2> Tech Stack </h2>
+<h3> Back-end </h3>
  1. NodeJs
  2. MongoDb
  3. Mongoose
  4. Zookeeper
  
+ <h3> front-end </h3>
+ 1. ReactJS
+ 2. Axios
+ 3. Tailwind-CSS
+
  ## Instructions to run this project
  1. Make `.env` file and add
   ```bash

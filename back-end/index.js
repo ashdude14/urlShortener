@@ -12,18 +12,23 @@ mongoose.connect(process.env.CREDENTIAL_MONGO)
     .catch((err) => console.log(err));
 
 
-    const corsOptions ={
-        origin:'https://url-shortener-wwz6-git-main-ashdude14s-projects.vercel.app/', 
-        credentials:true,           
-        optionSuccessStatus:200,
-        
-    }
+// const corsOptions = {
+//     origin: 'http://localhost:8000',
+//     credentials: true,
+//     optionSuccessStatus: 200,
+
+// }
 
 const app = express();
-app.use(cors(corsOptions)) 
+app.use(cors())
 app.use(express.json());
 
+// app.use((req, res) => {
+//     res.header('Access-Control-Allow-Origin', '*');
+//     res.header('Access-Control-Allow-Headers', 'Origin, X-Requested-With, Content-Type, Accept');
+// });
 app.post('/url', (req, res) => {
+
     const requestedUrl = req.body.url;
     if (!requestedUrl) {
         return res.status(400).json({ "error": "must enter url" });
@@ -33,10 +38,11 @@ app.post('/url', (req, res) => {
 });
 
 app.get('/', (req, res) => {
-    return res.status(200).json({ "message": "This is simple API to shortened the URL Created By Aashish!" });
+    return res.status(200).json({ "message": "This is simple API to shortened the URL Created By Aashish Singh!" });
 });
 
 app.get("/:shortUrl", async (req, res) => {
+    
     const shortUrl = req.params.shortUrl;
     const entry = await UrlModel.findOneAndUpdate(
         { shortUrl },

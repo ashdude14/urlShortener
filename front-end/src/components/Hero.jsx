@@ -67,7 +67,7 @@ const Hero = () => {
           </div>
           <div className='mt-[1%] justify-start '>
             <label className='bg-red-300 h-[10%]  w-full text-sm sm:text-lg text-black justify-center'>🥺: `https://url-shortener-wnom-git-main-ashdude14s-projects.vercel.app/` is the 🆓 vercel domain only!</label>
-            <label className='bg-red-300  h-[10%]  w-full text-sm text-black sm:text-lg justify-center '>  😉The short url id : {shortUrl} </label>
+            <label className='bg-red-300  h-[10%]  w-full text-sm text-black sm:text-lg justify-center '> Anyway! 😉The short url id : {shortUrl} </label>
           </div>
         </div>
       )}

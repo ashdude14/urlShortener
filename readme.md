@@ -5,7 +5,7 @@
 Project has two parts -
 1. Back-end - Making API for get, post, update and delete request.
 [Backend Server](https://url-shortener-wnom.vercel.app/).
-2. Front-end - UI of project, [Client Side](https://localhost:300).
+2. Front-end - UI of project, [Client Side](https://url-shortener-wwz6.vercel.app/).
 
 <h2> Back-End Server Task </h2>
 
@@ -16,9 +16,18 @@ Project has two parts -
 3. Makes a get request `https://url-shortener-wnom.vercel.app//<short-url>` , now this will rediect to `<your long url link to redirect>` .
 
 4. User can accesss this short url `https://url-shortener-wnom.vercel.app/<short-url>` .
-<h2>API Endpoints-</h2>
+<h2>Server Side</h2>
 
  https://url-shortener-wnom.vercel.app/
+
+ <h2> Client Side <h2>
+
+ https://url-shortener-wwz6.vercel.app/
+
+  
+![Front-end](ui.png "front-end of url shortener by Aashish!")
+
+
 ## Pre-requisite
 1. Node Installed.
 2. MongoDb Installed or uisng `MongoDb Atlas cluster`. 

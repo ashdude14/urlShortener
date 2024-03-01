@@ -5,7 +5,7 @@ const cors = require('cors')
 require('dotenv').config();
 const mongoose = require("mongoose");
 const { longUrlToShort, tempId } = require("./control/db-insert-helper");
-const { url: UrlModel } = require("./model/url-schema"); // Renamed variable to avoid conflict
+const {  url } = require("./model/url-schema"); // Renamed variable to avoid conflict
 
 mongoose.connect(process.env.CREDENTIAL_MONGO)
     .then(() => console.log(`Db connected!`))
@@ -37,14 +37,15 @@ app.post('/url', (req, res) => {
     return res.status(200).json(({ "shortUrl": tempId }));
 });
 
+
 app.get('/', (req, res) => {
-    return res.status(200).json({ "message": "This is simple API to shortened the URL Created By Aashish Singh!" });
+    return res.status(200).json({ "message": "This is simple API to shortened the URL Created By Aashish Kumar Singh!" });
 });
 
 app.get("/:shortUrl", async (req, res) => {
     
     const shortUrl = req.params.shortUrl;
-    const entry = await UrlModel.findOneAndUpdate(
+    const entry = await url.findOneAndUpdate(
         { shortUrl },
         {
             $push: {

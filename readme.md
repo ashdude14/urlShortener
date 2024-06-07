@@ -1,4 +1,4 @@
- ## <h1>Url Shortner </h1>
+ ## Url Shortner 
  Takes long url in input and genrates short url, there are more than one methods to encode, some of the methods are implemented in code as well. See white board diagram of [System Design](https://app.eraser.io/workspace/WT8cqvcIo0eTOKoVaQrM?origin=share)  for better understanding.
 
 ## <h2>What's this project about? </h2>
